@@ -79,7 +79,7 @@ region_pie = (
             opacity=alt.condition(region_select, alt.value(1), alt.value(0.25)),
         )
     )
-    .add_selection(region_select)
+    .add_params(region_select)
     .properties(title="Region Sales")
 )
 
