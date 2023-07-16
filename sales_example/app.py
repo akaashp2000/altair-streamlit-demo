@@ -58,7 +58,7 @@ def get_data():
 
 sales_data = get_data()
 
-region_select = alt.selection_single(fields=["region"], empty="all")
+region_select = alt.selection_point(fields=["region"], empty="all")
 region_pie = (
     (
         alt.Chart(sales_data)
