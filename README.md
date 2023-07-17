@@ -8,3 +8,4 @@ This repo contains examples of Altair visualisations and Streamlit dashboards
 * sales_example: based on a [blog post](https://blog.streamlit.io/drill-downs-and-filtering-with-streamlit-and-altair/)
   * It creates a dashboard based on dummy sales data.
   * Selection filters are for the Altair chart, rather than the Streamlit selectors as in cars_examples.
+  * I also added a notebook to show corresponding plots in Altair.
