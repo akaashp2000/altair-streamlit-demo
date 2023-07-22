@@ -34,6 +34,7 @@ months = [
     "Dec",
 ]
 st.title("2022 Sales Dashboard")
+np.random.seed(0)
 
 
 @st.cache_data
@@ -47,7 +48,13 @@ def get_data():
         "APAC": ["S31", "S32", "S33", "S34", "S35", "S36"],
     }
     rows = 25000
-    data["transaction_date"] = np.random.choice([str(i) for i in dates], size=rows)
+    data["transaction_date"] = np.random.choice(dates, size=rows)
+    data["month"] = data["transaction_date"].dt.strftime("%b")
+    data["year"] = data["transaction_date"].apply(lambda date: date.year)
+    data["day"] = data["transaction_date"].apply(lambda date: date.year)
+    data["day_of_week"] = data["transaction_date"].dt.strftime("%b")
+    data["transaction_date"] = [str(i) for i in data["transaction_date"]]
+
     data["region"] = np.random.choice(regions, size=rows, p=[0.1, 0.3, 0.4, 0.2])
     data["transaction_amount"] = np.random.uniform(100, 250000, size=rows).round(2)
     data["seller"] = data.apply(
