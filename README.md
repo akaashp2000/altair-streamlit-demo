@@ -9,3 +9,15 @@ This repo contains examples of Altair visualisations and Streamlit dashboards
   * It creates a dashboard based on dummy sales data.
   * Selection filters are for the Altair chart, rather than the Streamlit selectors as in cars_examples.
   * I also added a notebook to show corresponding plots in Altair.
+
+## Instructions for use:
+
+### Setup
+
+1. Clone the repo.
+
+``` git clone https://github.com/akaashp2000/altair-streamlit-demo ```
+
+2. Navigate to the repo and install the requirements (in a virtual environment if you wish).
+
+``` pip install -r requirements.txt ```
