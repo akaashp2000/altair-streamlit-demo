@@ -1,4 +1,4 @@
-# altair-streamlit-demo
+# Altair & Streamlit Demo
 
 This repo contains examples of Altair visualisations and Streamlit dashboards
 
