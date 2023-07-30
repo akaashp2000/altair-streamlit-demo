@@ -57,7 +57,7 @@ def get_data():
     data["month"] = data["transaction_date"].dt.strftime("%b")
     data["year"] = data["transaction_date"].apply(lambda date: date.year)
     data["day"] = data["transaction_date"].apply(lambda date: date.year)
-    data["day_of_week"] = data["transaction_date"].dt.strftime("%b")
+    data["day_of_week"] = data["transaction_date"].dt.strftime("%a")
     data["transaction_date"] = [str(i) for i in data["transaction_date"]]
 
     data["region"] = np.random.choice(regions, size=rows, p=[0.1, 0.3, 0.4, 0.2])
