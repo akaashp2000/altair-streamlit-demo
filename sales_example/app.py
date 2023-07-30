@@ -55,8 +55,9 @@ def get_data():
     rows = 25000
     data["transaction_date"] = np.random.choice(dates, size=rows)
     data["month"] = data["transaction_date"].dt.strftime("%b")
-    data["year"] = data["transaction_date"].apply(lambda date: date.year)
-    data["day"] = data["transaction_date"].apply(lambda date: date.year)
+    data["month_int"] = data["transaction_date"].dt.month
+    data["year"] = data["transaction_date"].dt.year
+    data["day"] = data["transaction_date"].dt.day
     data["day_of_week"] = data["transaction_date"].dt.strftime("%a")
     data["transaction_date"] = [str(i) for i in data["transaction_date"]]
 
