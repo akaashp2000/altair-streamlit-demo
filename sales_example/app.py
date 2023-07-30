@@ -4,7 +4,9 @@ import pandas as pd
 import numpy as np
 
 st.set_page_config(layout="wide")
+
 regions = ["LATAM", "EMEA", "NA", "APAC"]
+
 colors = [
     "#aa423a",
     "#f6b404",
@@ -19,6 +21,7 @@ colors = [
     "#d1b844",
     "#8db6d8",
 ]
+
 months = [
     "Jan",
     "Feb",
@@ -33,7 +36,9 @@ months = [
     "Nov",
     "Dec",
 ]
+
 st.title("2022 Sales Dashboard")
+
 np.random.seed(0)
 
 
@@ -66,6 +71,7 @@ def get_data():
 sales_data = get_data()
 
 region_select = alt.selection_point(fields=["region"])
+
 region_pie = (
     (
         alt.Chart(sales_data)
@@ -159,4 +165,5 @@ sellers_monthly_pie = (
 
 top_row = region_pie | region_summary
 full_chart = top_row & sellers_monthly_pie
+
 st.altair_chart(full_chart)
