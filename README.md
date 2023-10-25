@@ -24,7 +24,7 @@ Here are two examples based on dummy/example datasets:
 
 1. Clone the repo.
 
-``` git clone https://github.com/akaashp2000/altair-streamlit-demo ```
+``` git clone https://github.com/akaashp2000/altair-streamlit-demo.git ```
 
 2. Navigate to the repo and install the requirements (in a virtual environment if you wish).
 
