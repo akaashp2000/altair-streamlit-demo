@@ -1,6 +1,0 @@
-altair
-numpy
-pandas
-streamlit
-vega_datasets
-ipykernel
